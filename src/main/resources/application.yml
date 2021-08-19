@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://${MYSQL_HOST:localhost}:3306/test
+    username: user
+    password: ${PASSWORD}
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    hibernate:
+      ddl-auto: update
+  application:
+    name: pizza-auth-service
+server:
+  port: 9100
